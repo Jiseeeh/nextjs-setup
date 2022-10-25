@@ -24,7 +24,7 @@ const Steps: React.FC = () => {
           <pre data-prefix="$">
             <code>
               <Command content="npx" /> create-next-app@latest{" "}
-              <Command content="appName" /> && cd appName
+              <Command content="appName" /> && cd <Command content="appName" />
             </code>
           </pre>
         </section>
