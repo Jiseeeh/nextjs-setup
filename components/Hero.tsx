@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { useDarkMode } from "../lib/DarkModeContext";
 
 interface HeroProps {
   heroHeading: string;
@@ -7,19 +8,24 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = (props) => {
+  const [isEnabled] = useDarkMode();
+  const bgColor = isEnabled ? "bg-primary" : "bg-secondary";
+  const textColor = isEnabled ? "text-secondary" : "text-primary";
+
   return (
     <>
-      <article className="hero min-h-screen bg-primary">
+      <article className={`hero min-h-screen ${bgColor}`}>
         <div className="hero-content flex-col  lg:flex-row-reverse">
           {/* hero */}
           <section className="relative h-72 w-full lg:max-w-lg">
             <Image
               src="/hero.webp"
               layout="fill"
+              alt="Girl character holding a Laptop and a Book."
               className=" rounded-lg shadow-2xl object-cover"
             />
           </section>
-          <div className="text-secondary">
+          <div className={`${textColor}`}>
             <h1 className="text-5xl font-bold">{props.heroHeading}</h1>
             <p className="py-6">{props.heroDesc}</p>
             <button className="btn btn-primary bg-accent border-accent">
