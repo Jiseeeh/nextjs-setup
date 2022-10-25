@@ -21,6 +21,7 @@ const Hero: React.FC<HeroProps> = (props) => {
             <Image
               src="/hero.webp"
               layout="fill"
+              priority
               alt="Girl character holding a Laptop and a Book."
               className=" rounded-lg shadow-2xl object-cover"
             />
