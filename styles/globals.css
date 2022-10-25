@@ -3,7 +3,7 @@
 
 @layer components {
   .code-block {
-    @apply mx-3 text-secondary md:max-w-lg;
+    @apply mx-3 md:max-w-lg;
   }
 }
 
