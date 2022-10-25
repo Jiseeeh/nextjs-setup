@@ -32,12 +32,12 @@ const Steps: React.FC = () => {
     <>
       <h1
         id="get-started"
-        className={`pb-8 text-5xl font-bold text-center ${textColor} ${bgColor}`}
+        className={`pb-8 text-5xl font-bold text-center ${textColor} ${bgColor} transition-all ease-in`}
       >
         Let's go!
       </h1>
       <section
-        className={`pb-3 ${textColor} ${bgColor} grid gap-5 md:grid-cols-2`}
+        className={`pb-3 ${textColor} ${bgColor} grid gap-5 transition-all ease-in md:grid-cols-2`}
       >
         <ul className="steps steps-vertical md:justify-self-end md:-mt-10">
           {steps.map((step, index) => (

@@ -14,7 +14,9 @@ const Hero: React.FC<HeroProps> = (props) => {
 
   return (
     <>
-      <article className={`hero min-h-screen ${bgColor}`}>
+      <article
+        className={`hero min-h-screen ${bgColor} transition-all ease-in`}
+      >
         <div className="hero-content flex-col  lg:flex-row-reverse">
           {/* hero */}
           <section className="relative h-72 w-full lg:max-w-lg">
