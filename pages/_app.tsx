@@ -1,8 +1,13 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import { SharedTextProvider } from "../lib/DarkModeContext";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <SharedTextProvider>
+      <Component {...pageProps} />
+    </SharedTextProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
