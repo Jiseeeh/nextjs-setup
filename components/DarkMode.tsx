@@ -4,15 +4,19 @@ import { useDarkMode } from "../lib/DarkModeContext";
 const DarkMode: React.FC = () => {
   const [isEnabled, setIsEnabled] = useDarkMode();
 
-  const handleInputClick = () => {
+  const handleInputChange = () => {
     setIsEnabled((prevEnabled) => !prevEnabled);
   };
 
   return (
-    <div className="z-50 fixed top-0">
+    <div className="z-50 p-3 fixed top-0">
       <label className="swap swap-rotate">
         {/* this hidden checkbox controls the state */}
-        <input type="checkbox" checked={isEnabled} onClick={handleInputClick} />
+        <input
+          type="checkbox"
+          checked={isEnabled}
+          onChange={handleInputChange}
+        />
         {/*sun icon*/}
         <svg
           className="swap-on fill-white w-10 h-10"
