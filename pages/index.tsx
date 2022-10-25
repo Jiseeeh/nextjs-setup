@@ -2,6 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import Hero from "../components/Hero";
+import Steps from "../components/Steps";
+
 const Home: NextPage = () => {
   return (
     <main>
@@ -14,6 +16,7 @@ const Home: NextPage = () => {
         heroHeading="Let's setup your Next.js!"
         heroDesc="Next.js with Tailwindcss and daisyUI makes your development fasteeer! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint fugiat animi magni qui et hic esse, quae ipsa tempora dolorem?"
       />
+      <Steps />
     </main>
   );
 };
