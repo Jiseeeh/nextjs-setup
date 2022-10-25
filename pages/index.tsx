@@ -4,6 +4,7 @@ import Head from "next/head";
 import Hero from "../components/Hero";
 import Steps from "../components/Steps";
 import DarkMode from "../components/DarkMode";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
         heroDesc="Next.js with Tailwindcss and daisyUI makes your development fasteeer! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint fugiat animi magni qui et hic esse, quae ipsa tempora dolorem?"
       />
       <Steps />
+      <Footer/>
     </main>
   );
 };
