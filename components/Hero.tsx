@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = (props) => {
             <h1 className="text-5xl font-bold">{props.heroHeading}</h1>
             <p className="py-6">{props.heroDesc}</p>
             <button className="btn btn-primary bg-accent border-accent">
-              Get Started&nbsp;
+              <a href="#get-started">Get Started&nbsp;</a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
