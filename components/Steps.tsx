@@ -1,21 +1,43 @@
 import React from "react";
 
 import Command from "./Command";
+import { useDarkMode } from "../lib/DarkModeContext";
 
 const Steps: React.FC = () => {
+  const [isEnabled] = useDarkMode();
+  const bgColor = isEnabled ? "bg-primary" : "bg-secondary";
+  const textColor = isEnabled ? "text-secondary" : "text-primary";
+
+  const steps = [
+    {
+      content: "Create Next App",
+    },
+    {
+      content: "Install and Initialize Tailwind",
+    },
+    {
+      content: "Add paths to your config",
+    },
+    {
+      content: "Add tailwind directives to your css",
+    },
+    {
+      content: "Install daisyUI",
+    },
+    {
+      content: "Add daisyUI to your config as a plugin",
+    },
+  ];
   return (
-    <section className="pb-3 text-secondary grid md:grid-cols-2 gap-5 bg-primary ">
-      <ul className=" steps steps-vertical md:justify-self-end md:-mt-10">
-        <li className="step step-accent">Create Next App</li>
-        <li className="step step-accent">Install and Initialize Tailwind</li>
-        <li className="step step-accent">Add paths to your config</li>
-        <li className="step step-accent">
-          Add tailwind directives to your css
-        </li>
-        <li className="step step-accent">Install daisyUI </li>
-        <li className="step step-accent">
-          Add daisyUI to your config as a plugin
-        </li>
+    <section
+      className={`pb-3 ${textColor} ${bgColor} grid gap-5 md:grid-cols-2`}
+    >
+      <ul className="steps steps-vertical md:justify-self-end md:-mt-10">
+        {steps.map((step, index) => (
+          <li key={index} className={`step step-accent ${textColor}`}>
+            {step.content}
+          </li>
+        ))}
       </ul>
       <section className="grid gap-5 md:gap-10 overflow-hidden">
         {/* Step 1 */}
