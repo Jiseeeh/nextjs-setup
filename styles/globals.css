@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
+
+@layer components {
+  .code-block {
+    @apply mx-3 text-secondary md:max-w-lg;
+  }
+}
+
 @tailwind utilities;
