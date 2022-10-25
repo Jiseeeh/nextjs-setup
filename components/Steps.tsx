@@ -34,7 +34,7 @@ const Steps: React.FC = () => {
         id="get-started"
         className={`pb-8 text-5xl font-bold text-center ${textColor} ${bgColor} transition-all ease-in`}
       >
-        Let's go!
+        Let&apos;s go!
       </h1>
       <section
         className={`pb-3 ${textColor} ${bgColor} grid gap-5 transition-all ease-in md:grid-cols-2`}
