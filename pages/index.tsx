@@ -25,7 +25,7 @@ const Home: NextPage = () => {
           property="og:description"
           content="Setting up Next.js with tailwindcss and DaisyUI"
         />
-        <meta property="og:image" content="/og.webp" />
+        <meta property="og:image" content="/hero.webp" />
         <link
           rel="icon"
           href="https://cdn.dribbble.com/users/1303230/screenshots/10786710/1anime_avatar_4x.jpg"
