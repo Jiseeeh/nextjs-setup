@@ -1,9 +1,9 @@
 import React from "react";
 
-import { useDarkMode } from "../lib/DarkModeContext";
+import useTheme from "../lib/useTheme";
 
 const Footer: React.FC = () => {
-  const [isEnabled] = useDarkMode();
+  const { isEnabled } = useTheme();
   const bgColor = isEnabled ? "bg-primary" : "bg-neutral";
 
   return (

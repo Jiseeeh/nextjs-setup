@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { useDarkMode } from "../lib/DarkModeContext";
+
+import useTheme from "../lib/useTheme";
 
 interface HeroProps {
   heroHeading: string;
@@ -8,9 +9,7 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = (props) => {
-  const [isEnabled] = useDarkMode();
-  const bgColor = isEnabled ? "bg-primary" : "bg-secondary";
-  const textColor = isEnabled ? "text-secondary" : "text-primary";
+  const { bgColor, textColor } = useTheme();
 
   return (
     <>

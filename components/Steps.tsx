@@ -1,12 +1,10 @@
 import React from "react";
 
 import Command from "./Command";
-import { useDarkMode } from "../lib/DarkModeContext";
+import useTheme from "../lib/useTheme";
 
 const Steps: React.FC = () => {
-  const [isEnabled] = useDarkMode();
-  const bgColor = isEnabled ? "bg-primary" : "bg-secondary";
-  const textColor = isEnabled ? "text-secondary" : "text-primary";
+  const { bgColor, textColor } = useTheme();
 
   const steps = [
     {
@@ -28,6 +26,7 @@ const Steps: React.FC = () => {
       content: "Add daisyUI to your config as a plugin",
     },
   ];
+
   return (
     <>
       <h1
