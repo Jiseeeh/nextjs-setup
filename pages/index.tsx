@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       {/* fixed element at top */}
       <DarkMode />
       <Head>
-        <title>Setting up Next.js</title>
+        <title>Setup your Next.js with Tailwindcss and daisyUI</title>
         <meta
           name="description"
           content="How to setup nextjs with tailwindcss and daisyUI."
