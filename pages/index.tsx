@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         />
         <meta
           name="keywords"
-          content="Nexjs, Setup Nextjs with tailwindcss and daisyUI, tailwindcss with daisyUI, how to setup nextjs, nextjs setup tutorial, "
+          content="Nextjs, Setup Nextjs with tailwindcss and daisyUI, tailwindcss with daisyUI, how to setup nextjs, nextjs setup tutorial, "
         ></meta>
         <meta
           property="og:description"
